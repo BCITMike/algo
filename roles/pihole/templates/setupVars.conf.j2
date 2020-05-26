@@ -1,0 +1,21 @@
+# {{ ansible_managed }}
+
+configDirectory=/etc/pihole
+installDirectory=/opt/pihole
+WEBPASSWORD=
+DNSMASQ_LISTENING=all
+SOCKET_LISTENING=all
+DNS_FQDN_REQUIRED=true
+DNS_BOGUS_PRIV=true
+DNSSEC=false
+CONDITIONAL_FORWARDING=false
+PIHOLE_INTERFACE=lo
+IPV4_ADDRESS={{ local_service_ip }}/32
+IPV6_ADDRESS={{ local_service_ipv6 }}/128
+PIHOLE_DNS_1={{ local_service_ip }}#5300
+PIHOLE_DNS_2=
+QUERY_LOGGING=true
+INSTALL_WEB_SERVER=true
+INSTALL_WEB_INTERFACE=true
+LIGHTTPD_ENABLED=true
+BLOCKING_ENABLED=true

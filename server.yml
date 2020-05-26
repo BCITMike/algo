@@ -51,6 +51,12 @@
         tags: dns
 
       - import_role:
+          name: pihole
+        when:
+          - algo_dns_adblocking
+        tags: dns
+
+      - import_role:
           name: wireguard
         when: wireguard_enabled
         tags: wireguard
